@@ -29,7 +29,7 @@ option8 = {
         roam: true,
         itemStyle: {
             normal: {
-                areaColor: 'rgba(7,21,57,0.5)',
+                // areaColor: 'rgba(7,21,57,0.5)',
                 borderColor: '#0177ff'
             },
             emphasis: {
@@ -341,7 +341,7 @@ option9 = {
         },
         itemStyle: {
             normal: {
-                areaColor: 'rgba(127,199,221,0.1)',
+                // areaColor: 'rgba(127,199,221,0.1)',
                 borderColor: '#0177ff'
             },
             emphasis: {

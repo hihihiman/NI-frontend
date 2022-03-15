@@ -349,8 +349,8 @@
                         color: new echarts.graphic.LinearGradient(
                             1, 0, 0, 1,
                             [
-                                {offset: 0, color: 'rgba(230,253,139,.7)'},
-                                {offset: 1, color: 'rgba(41,220,205,.7)'}
+                                {offset: 0, color: 'rgba(139,203,232,0.89)'},
+                                {offset: 1, color: 'rgba(41,220,205,0)'}
                             ]
                         )
                     }
@@ -459,8 +459,8 @@
                         color: new echarts.graphic.LinearGradient(
                             1, 0, 0, 1,
                             [
-                                {offset: 0, color: 'rgba(230,253,139,.7)'},
-                                {offset: 1, color: 'rgba(41,220,205,.7)'}
+                                {offset: 0, color: 'rgba(139,203,232,0.89)'},
+                                {offset: 1, color: 'rgba(41,220,205,0)'}
                             ]
                         )
                     }
@@ -850,8 +850,8 @@
                         color: new echarts.graphic.LinearGradient(
                             0, 0, 0, 1,
                             [
-                                {offset: 0, color: '#fffb34'},
-                                {offset: 1, color: '#032a72'}
+                                {offset: 0, color: '#49c95a'},
+                                {offset: 1, color: '#26498a'}
                             ]
                         )
                     }
@@ -869,9 +869,40 @@
 <script type="text/javascript">
 
     var myChart8 = echarts.init(document.getElementById('main8'));
+
+    function randomData() {
+        return Math.round(Math.random()*500);
+    }
+
+    var mydata = [
+        {name: '北京',value: randomData(),a:'111' },{name: '天津',value: randomData() },
+        {name: '上海',value: randomData() },{name: '重庆',value: randomData() },
+        {name: '河北',value: randomData() },{name: '河南',value: randomData() },
+        {name: '云南',value: randomData() },{name: '辽宁',value: randomData() },
+        {name: '黑龙江',value: randomData() },{name: '湖南',value: randomData() },
+        {name: '安徽',value: randomData() },{name: '山东',value: randomData() },
+        {name: '新疆',value: randomData() },{name: '江苏',value: randomData() },
+        {name: '浙江',value: randomData() },{name: '江西',value: randomData() },
+        {name: '湖北',value: randomData() },{name: '广西',value: randomData() },
+        {name: '甘肃',value: randomData() },{name: '山西',value: randomData() },
+        {name: '内蒙古',value1:randomData(),value2:123  },{name: '陕西',value: randomData() },
+        {name: '吉林',value: randomData() },{name: '福建',value: randomData() },
+        {name: '贵州',value: randomData() },{name: '广东',value: randomData() },
+        {name: '青海',value: randomData() },{name: '西藏',value: randomData() },
+        {name: '四川',value: randomData() },{name: '宁夏',value: randomData() },
+        {name: '海南',value: randomData() },{name: '台湾',value: randomData() },
+        {name: '香港',value: randomData() },{name: '澳门',value: randomData() }
+    ];
     let option = {
         tooltip: {
-            show: false
+            trigger: 'item',
+            formatter: function (params) {
+                return [
+                    params.data.name,
+                    '注册店铺数:' + params.data.value1,
+                    '发货店铺数:' + params.data.value2,
+                ].join('<br>');
+            }
         },
         geo: {
             map: "china",
@@ -882,7 +913,7 @@
                 normal: {
                     show: false, //关闭省份名展示
                     fontSize: "10",
-                    color: "rgba(0,0,0,0.7)"
+                    color: "rgba(0,0,0,0.1)"
                 },
                 emphasis: {
                     show: false
@@ -890,26 +921,28 @@
             },
             itemStyle: {
                 normal: {
-                    areaColor: "#593100",
-                    borderColor: "#389dff",
-                    borderWidth: 1, //设置外层边框
-                    shadowBlur: 5,
-                    shadowOffsetY: 8,
-                    shadowOffsetX: 0,
-                    shadowColor: "#2a0401"
+                    areaColor: 'rgba(7,21,57,0.1)',
+                    borderColor: '#0177ff'
                 },
                 emphasis: {
-                    areaColor: "#ff9318",
-                    shadowOffsetX: 0,
-                    shadowOffsetY: 0,
-                    shadowBlur: 5,
-                    borderWidth: 0,
-                    shadowColor: "rgba(0, 0, 0, 0.5)"
+                    areaColor: 'rgba(55,7,7,0.66)'//鼠标指上市时的颜色
                 }
             }
         },
+        visualMap: {
+            show : false,
+            x: 'left',
+            y: 'bottom',
+            splitList: [
+                {start: 500, end:600},{start: 400, end: 500},
+                {start: 300, end: 400},{start: 200, end: 300},
+                {start: 100, end: 200},{start: 0, end: 100},
+            ],
+            color: ['#66CC33', '#00FF00', '#66FF33','#339900', '#33CC00', '#00CC00']
+        },
         series: [
             {
+                name: '',
                 type: "map",
                 map: "china",
                 roam: false,
@@ -931,25 +964,27 @@
                 },
                 itemStyle: {
                     normal: {
-                        areaColor: "#fffb18",
+                        areaColor:'rgba(127,199,221,0.05)',
                         borderColor: "#389dff",
                         borderWidth: 0.5
                     },
                     emphasis: {
-                        areaColor: "#8d2100",
+                        areaColor: "rgba(140,215,194,0.58)",
                         shadowOffsetX: 0,
                         shadowOffsetY: 0,
                         shadowBlur: 5,
                         borderWidth: 0,
                         shadowColor: "rgba(0, 0, 0, 0.5)"
                     }
-                }
+                },
+                data:mydata
             }
         ]
     };
     myChart8.setOption(option);
 
 
+    // 告警店铺滚动特效
     function TimeControl() {
         $(".message_scroll_box").animate({marginTop: 96}, 800,
             function () {
@@ -958,7 +993,6 @@
 
             });
     }
-
     var T = setInterval(TimeControl, 2300);    //开始定时
     $(".message_scroll_box").mouseenter(function () {
         clearInterval(T);    //停止定时
