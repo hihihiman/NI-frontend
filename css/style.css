@@ -70,6 +70,18 @@ html, body {
     justify-content: space-between;
     flex-wrap: nowrap;
 }
+.item_right {
+    width: 349px;
+    height: 100%;
+    float: left;
+    padding-left: 1%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: stretch;
+}
 
 .pleft1 {
     width: 18.6%;
@@ -100,6 +112,16 @@ html, body {
     width: 18%;
     float: left;
     height: 100%
+}
+.left3 {
+    width: 18%;
+    float: left;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
 }
 
 .mrbox {
@@ -152,7 +174,7 @@ html, body {
 
 .mrbox_top {
     width: 100%;
-    height: 62.4%;
+    height: 90%;
 }
 
 .hdmrbox_top {
@@ -287,7 +309,7 @@ html, body {
 }
 
 .c1 {
-    background: #ac3ff2
+    background: #b19cbe
 }
 
 .c2 {
@@ -343,6 +365,10 @@ html, body {
 .big6 {
     width: 70px;
     height: 70px;
+}
+.big7 {
+    width: 80px;
+    height: 80px;
 }
 
 .leftclass {
@@ -430,7 +456,7 @@ html, body {
     background-repeat: no-repeat;
     background-position: top center;
     width: 100%;
-    height: 63.6%;
+    height: 40%;
 }
 
 .mrboxtm-b1 {
@@ -1084,8 +1110,8 @@ i.redr {
     background-repeat: no-repeat;
     background-position: top center;
     width: 96.8%;
-    height: 35.2%;
-    margin-top: 1%;
+    /*margin-top: 1%;*/
+
 }
 
 .pleftbox2topcont {
@@ -1119,8 +1145,8 @@ i.redr {
     background-repeat: no-repeat;
     background-position: top center;
     width: 97.8%;
-    height: 24.6%;
-    margin-top: 4.2%;
+    margin-top: 5%;
+    height: 34%;
 }
 
 .lpeftb2otcont1 {
@@ -1152,7 +1178,7 @@ i.redr {
     background-position: top center;
     position: relative;
     width: 100%;
-    height: 32.9%;
+    height: 58%;
     margin-top: 1.8%;
 }
 
@@ -1822,6 +1848,14 @@ i.redr {
     width: 100%;
     /*height: 100%;*/
     height: 485px;
+    box-sizing: border-box;
+    /*border:2px solid #016ae0;*/
+    /*border-radius: 10px;*/
+}
+.dataAllBorder03{
+    width: 100%;
+    /*height: 100%;*/
+    height: 580px;
     box-sizing: border-box;
     /*border:2px solid #016ae0;*/
     /*border-radius: 10px;*/

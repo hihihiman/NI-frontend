@@ -2,7 +2,19 @@
 <meta charset="utf-8">
 <title>商品分析</title>
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+
+<!--js-->
 <script src="js/echarts.min.js" charset="utf-8"></script>
+
+<!--设置是否为缩放模式 -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="js/jquery.min.js"></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/chartMap.js"></script>
+<script src="js/china.js"></script>
 
 
 <body>
@@ -22,11 +34,11 @@
     <div class="lefttime"><h2 class="tith2">统计时间</h2>
         <div class="lefttime_text">
             <ul>
-                <li class="bg active">今日</li>
+                <li class="bg ">今日</li>
                 <li></li>
                 <li class="bg">本周</li>
                 <li></li>
-                <li class="bg">本月</li>
+                <li class="bg active">本月</li>
                 <li></li>
                 <li class="bg">本季</li>
                 <li></li>
@@ -34,8 +46,8 @@
             </ul>
         </div>
     </div>
-    <div class="plefttoday"><h2 class="tith2">今日警情</h2>
-        <div class="lefttoday_tit" style=" height:8%"><p class="fl">地区：甘孜</p></div>
+    <div class="plefttoday"><h2 class="tith2">商品概况</h2>
+        <div class="lefttoday_tit" style=" height:8%"><p class="fl">备注：内容todo</p></div>
         <div class="lefttoday_number">
             <div class="widget-inline-box text-center fl">
                 <p>处警数</p>
@@ -62,34 +74,121 @@
         <!--  lefttoday_bar end-->
     </div>
     <div class="lpeftmidbot">
-        <h2 class="tith2">一标三实统计</h2>
+        <h2 class="tith2">各月异常商品数量</h2>
         <div id="lpeftmidbot" class="lpeftmidbotcont"></div>
     </div>
     <div class="lpeftbot">
-        <h2 class="tith2">实有人口性别占比</h2>
+        <h2 class="tith2">异常商品占比</h2>
         <div id="lpeftbot" class="lpeftbotcont"></div>
     </div>
 </div>
 <!--  left1 end -->
-<div class="left2">
+<div class="left3">
     <div class="pleftbox2top">
-        <h2 class="tith2">实有人口名族分析</h2>
-        <div id="pleftbox2top" class="pleftbox2topcont"></div>
-    </div>
-    <div class="pleftbox2midd"><h2 class="tith2">实有人口年龄结构</h2>
-        <div id="pleftbox2midd" class="pleftbox2middcont"></div>
+        <h2 class="tith2">异常商品展示</h2>
+        <div class="dataAllBorder01 cage_cl"
+             style="margin-top: 1.5% !important; height: 32%; position: relative;">
+            <div class="dataAllBorder03" style="padding: 1.2%; overflow: hidden">
+
+                <div class="message_scroll_box">
+                    <div class="message_scroll">
+                        <div class="scroll_top">
+                            <span class="scroll_title">店铺ID：12345678</span>
+                            <span class="scroll_level scroll_level01">一级</span>
+                            <a class="localize"></a>
+                            <span class="scroll_timer">2021-09-25</span>
+                        </div>
+                        <div class="msg_cage">
+                            <a class="localize_title">销量异常/价格异常</a>
+                        </div>
+                        <div class="msg_cage">
+                            <a class="localize_msg">因销量异常/价格异常，被多次扣除信誉分，特此批评。</a>
+                        </div>
+                    </div>
+                    <div class="message_scroll">
+                        <div class="scroll_top">
+                            <span class="scroll_title">店铺ID：12345678</span>
+                            <span class="scroll_level scroll_level01">一级</span>
+                            <a class="localize"></a>
+                            <span class="scroll_timer">2021-09-25</span>
+                        </div>
+                        <div class="msg_cage">
+                            <a class="localize_title">销量异常/价格异常</a>
+                        </div>
+                        <div class="msg_cage">
+                            <a class="localize_msg">因销量异常/价格异常，被多次扣除信誉分，特此批评。</a>
+                        </div>
+                    </div>
+                    <div class="message_scroll">
+                        <div class="scroll_top">
+                            <span class="scroll_title">店铺ID：12345678</span>
+                            <span class="scroll_level scroll_level01">一级</span>
+                            <a class="localize"></a>
+                            <span class="scroll_timer">2021-09-25</span>
+                        </div>
+                        <div class="msg_cage">
+                            <a class="localize_title">销量异常/价格异常</a>
+                        </div>
+                        <div class="msg_cage">
+                            <a class="localize_msg">因销量异常/价格异常，被多次扣除信誉分，特此批评。</a>
+                        </div>
+                    </div>
+                    <div class="message_scroll">
+                        <div class="scroll_top">
+                            <span class="scroll_title">数据流量警示</span>
+                            <span class="scroll_level scroll_level03">三级</span>
+                            <a class="localize"></a>
+                            <span class="scroll_timer">17-09-13/9:52</span>
+                        </div>
+                        <div class="msg_cage">
+                            <a class="localize_title">下载大量视频</a>
+                        </div>
+                        <div class="msg_cage">
+                            <a class="localize_msg">xxx视频网站</a>
+                        </div>
+                    </div>
+                    <div class="message_scroll">
+                        <div class="scroll_top">
+                            <span class="scroll_title">数据流量警示</span>
+                            <span class="scroll_level scroll_level02">二级</span>
+                            <a class="localize"></a>
+                            <span class="scroll_timer">17-09-13/9:52</span>
+                        </div>
+                        <div class="msg_cage">
+                            <a class="localize_title">下载大量视频</a>
+                        </div>
+                        <div class="msg_cage">
+                            <a class="localize_msg">xxx视频网站</a>
+                        </div>
+                    </div>
+                    <div class="message_scroll">
+                        <div class="scroll_top">
+                            <span class="scroll_title">数据流量警示</span>
+                            <span class="scroll_level scroll_level01">一级</span>
+                            <a class="localize"></a>
+                            <span class="scroll_timer">17-09-13/9:52</span>
+                        </div>
+                        <div class="msg_cage">
+                            <a class="localize_title">下载大量视频</a>
+                        </div>
+                        <div class="msg_cage">
+                            <a class="localize_msg">xxx视频网站</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="scroll_tool_outbox">
+                <div class="scroll_tool_box">
+                    <a class="scroll_tool" href="#">查看历史推送</a>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="lpeft2bot">
-        <h2 class="tith2">实有人口职业占比TOP5</h2>
+        <h2 class="tith2">商品标签情况图</h2>
 
         <div class="pvr fl liwp lpeftb2otcont1" style="height:80%;">
-            <ul>
-                <li class="hot1">1</li>
-                <li class="hot2">2</li>
-                <li class="hot3">3</li>
-                <li class="hot4">4</li>
-                <li class="hot5">5</li>
-            </ul>
             <div id="pleftbox2bott_cont" class="lpeftb2otcont" style="height:100%;"></div>
         </div>
 
@@ -100,77 +199,7 @@
 <div class="mrbox prbox">
     <div class="mrbox_top">
         <div class="mrbox_top_midd">
-            <div class="mrboxtm-mbox"><h2 class="tith2 pt1">警情警力地图分析</h2>
-                <div class="mrboxtm-map" style=" ">
-                    <ul>
-                        <li class="bluer" style="top:28%;left:12%">15</li>
-                        <li class="redr" style="top:31%;left:18%">13</li>
-                        <!--  石渠县-->
-                        <li class="bluer" style="top:31%;left:33%">15</li>
-                        <li class="redr" style="top:34%;left:36%">13</li>
-                        <!--  -->
-                        <li class="bluer" style="top:12%;left:43%">15</li>
-                        <li class="redr" style="top:15%;left:47%">13</li>
-                        <!--  -->
-                        <li class="bluer" style="top:22%;left:36%">15</li>
-                        <li class="redr" style="top:25%;left:41%">13</li>
-                        <!--  -->
-                        <li class="bluer" style="top:23%;left:57%">15</li>
-                        <li class="redr" style="top:16%;left:53%">13</li>
-                        <!--  -->
-                        <li class="bluer" style="top:26%;left:64%">15</li>
-                        <li class="redr" style="top:22%;left:67%">13</li>
-                        <!--  -->
-                        <li class="bluer" style="top:7%;left:68%">15</li>
-                        <li class="redr" style="top:15%;left:69%">13</li>
-                        <!--  丹巴-->
-                        <li class="bluer" style="top:32%;left:77%">15</li>
-                        <li class="redr" style="top:35%;left:80%">13</li>
-                        <!--  康定-->
-                        <li class="bluer" style="top:28%;left:81%">15</li>
-                        <li class="redr" style="top:27%;left:84%">13</li>
-                        <!--  泸定-->
-                        <li class="bluer" style="top:34%;left:69%">15</li>
-                        <li class="redr" style="top:37%;left:73%">13</li>
-                        <!--  雅江-->
-                        <li class="bluer" style="top:48%;left:87%">15</li>
-                        <li class="redr" style="top:47%;left:83%">13</li>
-                        <!--  九龙-->
-                        <li class="bluer" style="top:48%;left:60%">15</li>
-                        <li class="redr" style="top:56%;left:62%">13</li>
-                        <!--  理塘-->
-                        <li class="bluer" style="top:68%;left:60%">15</li>
-                        <li class="redr" style="top:70%;left:63%">13</li>
-                        <!--  巴塘-->
-                        <li class="bluer" style="top:67%;left:67%">15</li>
-                        <li class="redr" style="top:67%;left:71%">13</li>
-                        <!--  乡城-->
-                        <li class="bluer" style="top:82%;left:70%">15</li>
-                        <li class="redr" style="top:84%;left:73%">13</li>
-                        <!--  得荣-->
-                        <li class="bluer" style="top:68%;left:60%">15</li>
-                        <li class="redr" style="top:70%;left:63%">13</li>
-                        <!--  巴塘-->
-                        <li class="bluer" style="top:71%;left:78%">15</li>
-                        <li class="redr" style="top:74%;left:81%">13</li>
-                        <!--  稻城-->
-
-                        <li class="bluer" style="top:31%;left:57%">15</li>
-                        <li class="redr" style="top:33%;left:53%">13</li>
-                        <li class="bluer" style="top:44%;left:47%">15</li>
-                        <li class="redr" style="top:48%;left:52%">13</li>
-                    </ul>
-                </div>
-            </div>
-            <!--  map end-->
-            <div class="pmrboxbottom"><h2 class="tith2 pt1">涉稳警情</h2>
-                <div id="pmrboxbottom" class="pmrboxbottomcont"></div>
-            </div>
-        </div>
-        <!-- mrbox_top_midd end -->
-        <div class="mrbox_top_right">
-            <div class="pmrtop1">
-                <h2 class="tith2">实名制人口统计</h2>
+            <div class="mrboxtm-mbox"><h2 class="tith2 pt1">销量排行</h2>
                 <div class="pmrtop_cont1">
                     <div class="pmrtop_contheight">
                         <div class="widget-inline-box text-center fl">
@@ -184,60 +213,290 @@
                     </div>
                     <div class="lefttoday_bar">
                         <ul>
-                            <li class="c1 big1" style="top: 10%;left: 16%;"><span>交通警情6</span></li>
-                            <li class="c2 big2" style="top: 35%;left: 65%;"><span>求助1</span></li>
-                            <li class="c3 big4" style="top: 25%;left: 35%;"><span>无效报警2</span></li>
-                            <li class="c4 big5" style="top: 65%;left: 65%;"><span>投诉2</span></li>
-                            <li class="c5 big6" style="top: 65%;left: 25%;"><span>灾害事故1</span></li>
-                            <li class="c6 big1" style="top: 45%;left: 15%;"><span>刑事案件1</span></li>
-                            <li class="c1 big0" style="top: 35%;left: 75%;"></li>
-                            <li class="c2 big0" style="top: 85%;left: 55%;"></li>
-                            <li class="c3 big0" style="top: 85%;left: 15%;"></li>
+                            <li class="c1 big7" style="top: 10%;left: 16%;"><span>商品类别1</span></li>
+                            <li class="c2 big6" style="top: 15%;left: 65%;"><span>商品类别2</span></li>
+                            <li class="c3 big5" style="top: 25%;left: 35%;"><span>商品类别3</span></li>
+                            <li class="c4 big5" style="top: 65%;left: 65%;"><span>商品类别4</span></li>
+                            <li class="c5 big4" style="top: 65%;left: 25%;"><span>商品类别5</span></li>
+                            <li class="c6 big4" style="top: 45%;left: 15%;"><span>商品类别6</span></li>
+                            <li class="c1 big3" style="top: 35%;left: 75%;"></li>
+                            <li class="c2 big3" style="top: 85%;left: 55%;"></li>
+                            <li class="c3 big2" style="top: 85%;left: 15%;"></li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <!-- pmrtop  -->
-
-            <div class="pmrtop" style=" margin-top: 3.3%">
-                <h2 class="tith2">实名制人口统计</h2>
-                <div class="pmrtop_cont pmrtop_wid">
-                    <div class="pmrtop_contheight">
-                        <div class="widget-inline-box text-center fl">
-                            <p>流动人口</p>
-                            <h3 class="pt6 ceeb1fd">8654</h3>
-                        </div>
-                        <div class="widget-inline-box text-center fl">
-                            <p>重点人员</p>
-                            <h3 class="pt6 c24c9ff">135622</h3>
-                        </div>
-                        <div class="widget-inline-box text-center fl">
-                            <p>重点人员</p>
-                            <h3 class="pt6 cffff00">135622</h3>
-                        </div>
-                    </div>
-                    <div id="pmrmidd" class="pmrmiddcont"></div>
-                </div>
+            <!--  map end-->
+            <div class="pmrboxbottom" style="padding-top: 30px"><h2 class="tith2 pt1">离群点检测</h2>
+                <div id="pmrboxbottom" class="pmrboxbottomcont"></div>
             </div>
-            <!-- pmrtop  -->
+        </div>
+        <!-- mrbox_top_midd end -->
+        <!--        <div class="mrbox_top_right">-->
+        <!--            <div class="pmrtop1">-->
+        <!--                <h2 class="tith2">todo</h2>-->
+        <!--                <div class="pmrtop_cont1">-->
+        <!--                    <div class="pmrtop_contheight">-->
+        <!--                        <div class="widget-inline-box text-center fl">-->
+        <!--                            <p>流动人口</p>-->
+        <!--                            <h3 class="pt6 ceeb1fd">8654</h3>-->
+        <!--                        </div>-->
+        <!--                        <div class="widget-inline-box text-center fl">-->
+        <!--                            <p>重点人员</p>-->
+        <!--                            <h3 class="pt6 c24c9ff">135622</h3>-->
+        <!--                        </div>-->
+        <!--                    </div>-->
+        <!--                    <div class="lefttoday_bar">-->
+        <!--                        <ul>-->
+        <!--                            <li class="c1 big1" style="top: 10%;left: 16%;"><span>交通警情6</span></li>-->
+        <!--                            <li class="c2 big2" style="top: 35%;left: 65%;"><span>求助1</span></li>-->
+        <!--                            <li class="c3 big4" style="top: 25%;left: 35%;"><span>无效报警2</span></li>-->
+        <!--                            <li class="c4 big5" style="top: 65%;left: 65%;"><span>投诉2</span></li>-->
+        <!--                            <li class="c5 big6" style="top: 65%;left: 25%;"><span>灾害事故1</span></li>-->
+        <!--                            <li class="c6 big1" style="top: 45%;left: 15%;"><span>刑事案件1</span></li>-->
+        <!--                            <li class="c1 big0" style="top: 35%;left: 75%;"></li>-->
+        <!--                            <li class="c2 big0" style="top: 85%;left: 55%;"></li>-->
+        <!--                            <li class="c3 big0" style="top: 85%;left: 15%;"></li>-->
+        <!--                        </ul>-->
+        <!--                    </div>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--            &lt;!&ndash; pmrtop  &ndash;&gt;-->
 
+        <!--            <div class="pmrtop" style=" margin-top: 3.3%">-->
+        <!--                <h2 class="tith2">todo</h2>-->
+        <!--                <div class="pmrtop_cont pmrtop_wid">-->
+        <!--                    <div class="pmrtop_contheight">-->
+        <!--                        <div class="widget-inline-box text-center fl">-->
+        <!--                            <p>流动人口</p>-->
+        <!--                            <h3 class="pt6 ceeb1fd">8654</h3>-->
+        <!--                        </div>-->
+        <!--                        <div class="widget-inline-box text-center fl">-->
+        <!--                            <p>重点人员</p>-->
+        <!--                            <h3 class="pt6 c24c9ff">135622</h3>-->
+        <!--                        </div>-->
+        <!--                        <div class="widget-inline-box text-center fl">-->
+        <!--                            <p>重点人员</p>-->
+        <!--                            <h3 class="pt6 cffff00">135622</h3>-->
+        <!--                        </div>-->
+        <!--                    </div>-->
+        <!--                    <div id="pmrmidd" class="pmrmiddcont"></div>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--            &lt;!&ndash; pmrtop  &ndash;&gt;-->
+
+        <!--        </div>-->
+        <div class="item_right">
+            <div class="aleftboxtbott">
+                <h2 class="tith2">异常商品高发分类TOP5</h2>
+                <div class="lefttoday_tit height ht">
+                    <!--                <p class="fl">状态：已调节</p>-->
+                    <p class="fr">时间段：2021-06 至 2021-09</p></div>
+                <div id="chart3" class="aleftboxtmiddcont"></div>
+            </div>
+            <div class="aleftboxtbott">
+                <h2 class="tith2">异常商品归因TOP5</h2>
+                <div class="lefttoday_tit height">
+                    <!--                <p class="fl">状态：已调节</p>-->
+                    <p class="fr">时间段：2021-06 至 2021-09</p></div>
+                <div id="chart4" class="aleftboxtbott_cont"></div>
+            </div>
         </div>
     </div>
 
+    <!--    <div class="mrbox_bottom">-->
+    <!--        <div class="rbottom_box1"><h2 class="tith2">高危人员年龄分析</h2>-->
+    <!--            <div id="prbottom_box1" class="prbottom_box1cont"></div>-->
+    <!--        </div>-->
+    <!--        <div class="rbottom_box2"><h2 class="tith2">高危人员分类统计</h2>-->
+    <!--            <div id="prbottom_box2" class="prbottom_box1cont"></div>-->
+    <!--        </div>-->
+    <!--        <div class="rbottom_box3"><h2 class="tith2 pt2">流动人口年龄分析</h2>-->
+    <!--            <div id="prbottom_box3" class="prbottom_box1cont"></div>-->
+    <!--        </div>-->
 
-    <div class="mrbox_bottom">
-        <div class="rbottom_box1"><h2 class="tith2">高危人员年龄分析</h2>
-            <div id="prbottom_box1" class="prbottom_box1cont"></div>
-        </div>
-        <div class="rbottom_box2"><h2 class="tith2">高危人员分类统计</h2>
-            <div id="prbottom_box2" class="prbottom_box1cont"></div>
-        </div>
-        <div class="rbottom_box3"><h2 class="tith2 pt2">流动人口年龄分析</h2>
-            <div id="prbottom_box3" class="prbottom_box1cont"></div>
-        </div>
-
-    </div>
+    <!--    </div>-->
 </div>
+<!--chart3-->
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('chart3'));
+    option = {
+        color: ['#7ecef4'],
+        backgroundColor: 'rgba(1,202,217,.2)',
+        grid: {
+            left: 20,
+            right: 20,
+            top: 13,
+            bottom: 6,
+            containLabel: true
+        },
+
+        xAxis: {
+            type: 'value',
+            axisLine: {
+                lineStyle: {
+                    color: 'rgba(255,255,255,.2)'
+                }
+            },
+            splitLine: {
+                lineStyle: {
+                    color: 'rgba(255,255,255,0)'
+                }
+            },
+            axisLabel: {
+                color: "rgba(255,255,255,0)"
+            },
+            boundaryGap: [0, 0.01]
+        },
+        yAxis: {
+            type: 'category',
+            axisLine: {
+                lineStyle: {
+                    color: 'rgba(255,255,255,.5)'
+                }
+            },
+            splitLine: {
+                lineStyle: {
+                    color: 'rgba(255,255,255,.1)'
+                }
+            },
+            axisLabel: {
+                color: "rgba(255,255,255,.5)"
+            },
+            data: ['店铺名称1', '店铺名称2', '店铺名称3', '店铺名称4', '店铺名称5']
+        },
+        series: [
+            {
+                name: '2011年',
+                type: 'bar',
+                barWidth: 30,
+                itemStyle: {
+                    normal: {
+                        color: new echarts.graphic.LinearGradient(
+                            1, 0, 0, 1,
+                            [
+                                {offset: 0, color: 'rgba(139,203,232,0.89)'},
+                                {offset: 1, color: 'rgba(41,220,205,0)'}
+                            ]
+                        )
+                    }
+                },
+                data: [18203, 23489, 29034, 30000, 40000]
+            }
+        ]
+    };
+    myChart.setOption(option);
+    // var myChart = echarts.init(document.getElementById('aleftboxtmidd'));
+    // option = {
+    //     color: ['#76c4bf', '#e5ffc7', '#508097', '#4d72d9'],
+    //     backgroundColor: 'rgba(1,202,217,.2)',
+    //     grid: {
+    //         left: 10,
+    //         right: 40,
+    //         top: 20,
+    //         bottom: 0,
+    //         containLabel: true
+    //     },
+    //     // legend: {
+    //     //     x : 'center',
+    //     //     y : '70%',
+    //     //     textStyle:{
+    //     //       fontSize: 10,
+    //     //       color:'rgba(255,255,255,.7)'
+    //     //     },
+    //     //     data:['康定市','丹巴县','甘孜县','理塘县']
+    //     // },
+    //     calculable: true,
+    //     series: [
+    //
+    //         {
+    //             name: '面积模式',
+    //             type: 'pie',
+    //             radius: [5, 60],
+    //             center: ['50%', '55%'],
+    //             roseType: 'area',
+    //             data: [
+    //                 {value: 10, name: '康定市'},
+    //                 {value: 5, name: '丹巴县'},
+    //                 {value: 15, name: '甘孜县'},
+    //                 {value: 25, name: '理塘县'}
+    //             ]
+    //         }
+    //     ]
+    // };
+    // myChart.setOption(option);
+</script>
+
+<!--chart4-->
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('chart4'));
+    option = {
+        color: ['#7ecef4'],
+        backgroundColor: 'rgba(1,202,217,.2)',
+        grid: {
+            left: 20,
+            right: 20,
+            top: 13,
+            bottom: 6,
+            containLabel: true
+        },
+
+        xAxis: {
+            type: 'value',
+            axisLine: {
+                lineStyle: {
+                    color: 'rgba(255,255,255,.2)'
+                }
+            },
+            splitLine: {
+                lineStyle: {
+                    color: 'rgba(255,255,255,0)'
+                }
+            },
+            axisLabel: {
+                color: "rgba(255,255,255,0)"
+            },
+            boundaryGap: [0, 0.01]
+        },
+        yAxis: {
+            type: 'category',
+            axisLine: {
+                lineStyle: {
+                    color: 'rgba(255,255,255,.5)'
+                }
+            },
+            splitLine: {
+                lineStyle: {
+                    color: 'rgba(255,255,255,.1)'
+                }
+            },
+            axisLabel: {
+                color: "rgba(255,255,255,.5)"
+            },
+            data: ['店铺名称1', '店铺名称2', '店铺名称3', '店铺名称4', '店铺名称5']
+        },
+        series: [
+            {
+                name: '2011年',
+                type: 'bar',
+                barWidth: 30,
+                itemStyle: {
+                    normal: {
+                        color: new echarts.graphic.LinearGradient(
+                            1, 0, 0, 1,
+                            [
+                                {offset: 0, color: 'rgba(139,203,232,0.89)'},
+                                {offset: 1, color: 'rgba(41,220,205,0)'}
+                            ]
+                        )
+                    }
+                },
+                data: [5000, 4032, 3780, 2500, 2000]
+            }
+        ]
+    };
+    myChart.setOption(option);
+</script>
 <script type="text/javascript">
     var myChart = echarts.init(document.getElementById('lpeftmidbot'));
     option = {
@@ -263,7 +522,7 @@
                 fontSize: 10,
                 color: 'rgba(255,255,255,.7)'
             },
-            data: ['实有人口', '实有房屋', '实有单位']
+            data: ['价格异常', '销量异常']
         },
         xAxis: [
             {
@@ -282,7 +541,7 @@
                     color: "rgba(255,255,255,.7)"
                 },
 
-                data: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+                data: ['6', '7', '8', '9'],
                 axisPointer: {
                     type: 'shadow'
                 }
@@ -293,8 +552,8 @@
                 type: 'value',
                 name: '',
                 min: 0,
-                max: 250,
-                interval: 50,
+                max: 35,
+                interval: 5,
                 axisLine: {
                     lineStyle: {
                         color: 'rgba(255,255,255,.3)'
@@ -307,7 +566,7 @@
                 },
 
                 axisLabel: {
-                    formatter: '{value} ml'
+                    formatter: '{value} w'
                 }
             },
             {
@@ -326,14 +585,14 @@
                     }
                 },
                 axisLabel: {
-                    formatter: '{value} °C'
+                    formatter: '{value} w'
                 }
             }
         ],
         series: [
 
             {
-                name: '实有人口',
+                name: '价格异常',
                 type: 'bar',
                 itemStyle: {
                     normal: {
@@ -346,10 +605,10 @@
                         )
                     }
                 },
-                data: [2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3]
+                data: [30, 25, 32, 27]
             },
             {
-                name: '实有房屋',
+                name: '销量异常',
                 type: 'bar',
 
                 itemStyle: {
@@ -363,66 +622,78 @@
                         )
                     }
                 },
-                data: [2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3]
-            },
-            {
-                name: '实有单位',
-                type: 'bar',
-                itemStyle: {
-                    normal: {
-                        color: new echarts.graphic.LinearGradient(
-                            0, 0, 0, 1,
-                            [
-                                {offset: 0, color: '#fffb34'},
-                                {offset: 1, color: '#032a72'}
-                            ]
-                        )
-                    }
-                },
-                data: [2.0, 2.2, 3.3, 4.5, 6.3, 10.2, 20.3, 23.4, 23.0, 16.5, 12.0, 6.2]
+                data: [15, 19, 24, 17]
             }
         ]
     };
     myChart.setOption(option);
 </script>
 
+<!--滚动特效-->
+<script type="text/javascript">
+    function TimeControl() {
+        $(".message_scroll_box").animate({marginTop: 96}, 800,
+            function () {
+                $(".message_scroll_box").css({marginTop: 0});    //把顶部的边界清零
+                $(".message_scroll_box .message_scroll:first").before($(".message_scroll_box .message_scroll:last"));    //在第一个新闻后面插入最后一个新闻
+
+            });
+    }
+
+    var T = setInterval(TimeControl, 2300);    //开始定时
+    $(".message_scroll_box").mouseenter(function () {
+        clearInterval(T);    //停止定时
+    })
+        .mouseleave(function () {
+            T = setInterval(TimeControl, 2500);    //再次定时
+        })
+</script>
 <script type="text/javascript">
     var myChart = echarts.init(document.getElementById('lpeftbot'));
     option = {
-        color: ['#d2d17c', '#00b7ee', '#5578cf', '#5ebbeb', '#d16ad8', '#f8e19a', '#00b7ee', '#81dabe', '#5fc5ce'],
-        backgroundColor: 'rgba(1,202,217,.2)',
-        grid: {
-            left: 20,
-            right: 20,
-            top: 0,
-            bottom: 20
-        },
-        legend: {
-            top: 10,
-            textStyle: {
-                fontSize: 10,
-                color: 'rgba(255,255,255,.7)'
-            },
-            data: ['男', '女']
+        // legend: {
+        //     top: 'bottom'
+        // },
+        color: [
+            '#fa5ae4',
+            '#91cc75',
+            '#fac858',
+            '#ee6666',
+            '#73c0de',
+            '#3ba272',
+            '#fc8452',
+            '#c6acd3',
+            '#ea7ccc'],
+        toolbox: {
+            show: true,
+            feature: {
+                mark: {show: true},
+                dataView: {show: true, readOnly: false},
+                restore: {show: true},
+                saveAsImage: {show: true}
+            }
         },
         series: [
             {
-                name: '访问来源',
-                type: 'pie',
-                radius: '55%',
-                center: ['50%', '55%'],
-                data: [
-                    {value: 335, name: '男'},
-                    {value: 310, name: '女'}
 
-                ],
+                name: 'Nightingale Chart',
+                type: 'pie',
+                radius: [30, 90],
+                center: ['50%', '50%'],
+                roseType: 'area',
                 itemStyle: {
-                    emphasis: {
-                        shadowBlur: 10,
-                        shadowOffsetX: 0,
-                        shadowColor: 'rgba(0, 0, 0, 0.5)'
-                    }
-                }
+                    borderRadius: 8
+                },
+                data: [
+                    {value: 40, name: 'rose 1'},
+                    {value: 38, name: 'rose 2'},
+                    {value: 32, name: 'rose 3'},
+                    {value: 30, name: 'rose 4'},
+                    {value: 28, name: 'rose 5'},
+                    {value: 26, name: 'rose 6'},
+                    {value: 22, name: 'rose 7'},
+                    {value: 18, name: 'rose 8'}
+                ]
             }
         ]
     };
@@ -520,175 +791,146 @@
 </script>
 <script type="text/javascript">
     var myChart = echarts.init(document.getElementById('pmrboxbottom'));
-    option = {
-        color: ['#d2d17c', '#00b7ee', '#5578cf', '#5ebbeb', '#d16ad8', '#f8e19a', '#00b7ee', '#81dabe', '#5fc5ce'],
-        backgroundColor: 'rgba(1,202,217,.2)',
-        legend: {
-            top: 10,
-            textStyle: {
-                fontSize: 10,
-                color: 'rgba(255,255,255,.7)'
-            },
-            data: ['涉恐人员', '涉稳人员', '涉毒人员', '在逃人员', '重点上访人员', '肇事肇祸精神病人', '刑事犯罪前科人员']
-        },
-        grid: {
-            left: 10,
-            right: 10,
-            top: 40,
-            bottom: 10,
-            containLabel: true
-        },
+    // todo 三维散点图
+    option = {}
+    myChart.setOption(option)
 
-        xAxis: [
-            {
-                type: 'category',
-                axisLine: {
-                    lineStyle: {
-                        color: 'rgba(255,255,255,.3)'
-                    }
-                },
-                splitLine: {
-                    lineStyle: {
-                        color: 'rgba(255,255,255,.01)'
-                    }
-                },
-                data: ['康定市', '泸定县', '丹巴县', '九龙县', '新龙县', '巴塘县', '得荣县', '理塘县', '甘孜县', '道孚县', '德格县', '色达县']
-            }
-        ],
-        yAxis: [
-            {
-                axisLine: {
-                    lineStyle: {
-                        color: 'rgba(255,255,255,.3)'
-                    }
-                },
-                splitLine: {
-                    lineStyle: {
-                        color: 'rgba(255,255,255,.01)'
-                    }
-                },
-
-                axisLabel: {
-                    formatter: '{value} ml'
-                },
-                type: 'value'
-            }
-
-        ],
-        series: [
-
-            {
-                name: '涉恐人员',
-                type: 'bar',
-                barWidth: 30,
-                stack: '搜索引擎',
-                data: [620, 732, 701, 734, 1090, 1130, 1120, 620, 732, 701, 734, 1090,]
-            },
-            {
-                name: '涉稳人员',
-                type: 'bar',
-                stack: '搜索引擎',
-                data: [120, 132, 101, 134, 290, 230, 220, 101, 134, 290, 230, 220]
-            },
-            {
-                name: '涉毒人员',
-                type: 'bar',
-                stack: '搜索引擎',
-                data: [60, 72, 71, 74, 190, 130, 110, 71, 74, 190, 130, 110]
-            },
-            ,
-            {
-                name: '在逃人员',
-                type: 'bar',
-                stack: '搜索引擎',
-                data: [120, 132, 101, 134, 290, 230, 220, 101, 134, 290, 230, 220]
-            },
-            {
-                name: '重点上访人员',
-                type: 'bar',
-                stack: '搜索引擎',
-                data: [60, 72, 71, 74, 190, 130, 110, 71, 74, 190, 130, 110]
-            },
-            {
-                name: '肇事肇祸精神病人',
-                type: 'bar',
-                stack: '搜索引擎',
-                data: [60, 72, 71, 74, 190, 130, 110, 71, 74, 190, 130, 110]
-            },
-            {
-                name: '重大刑事犯罪前科人员',
-                type: 'bar',
-                stack: '搜索引擎',
-                data: [62, 82, 91, 84, 109, 110, 120, 91, 84, 109, 110, 120]
-            }
-        ]
-    };
-    myChart.setOption(option);
 </script>
+<!--商品标签情况图-->
 <script type="text/javascript">
     var myChart = echarts.init(document.getElementById('pleftbox2bott_cont'));
     option = {
-        color: ['#7ecef4'],
-        backgroundColor: 'rgba(1,202,217,.2)',
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'cross',
+                label: {
+                    backgroundColor: '#6a7985'
+                }
+            }
+        },
+        toolbox: {
+            feature: {
+                saveAsImage: {}
+            }
+        },
         grid: {
-            left: 40,
-            right: 20,
-            top: 30,
-            bottom: 0,
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
             containLabel: true
         },
-
-        xAxis: {
-            type: 'value',
-            axisLine: {
-                lineStyle: {
-                    color: 'rgba(255,255,255,0)'
-                }
-            },
-            splitLine: {
-                lineStyle: {
-                    color: 'rgba(255,255,255,0)'
-                }
-            },
-            axisLabel: {
-                color: "rgba(255,255,255,0)"
-            },
-            boundaryGap: [0, 0.01]
-        },
-        yAxis: {
-            type: 'category',
-            axisLine: {
-                lineStyle: {
-                    color: 'rgba(255,255,255,.5)'
-                }
-            },
-            splitLine: {
-                lineStyle: {
-                    color: 'rgba(255,255,255,.1)'
-                }
-            },
-            axisLabel: {
-                color: "rgba(255,255,255,.5)"
-            },
-            data: ['务农', '建筑工', '技工', '销售', '职工']
-        },
-        series: [
+        xAxis: [
             {
-                name: '2011年',
-                type: 'bar',
-                barWidth: 20,
-                itemStyle: {
-                    normal: {
-                        color: new echarts.graphic.LinearGradient(
-                            1, 0, 0, 1,
-                            [
-                                {offset: 0, color: 'rgba(230,253,139,.7)'},
-                                {offset: 1, color: 'rgba(41,220,205,.7)'}
-                            ]
-                        )
+                type: 'category',
+                boundaryGap: false,
+                data: ['6月', '7月', '8月', '9月'],
+
+                axisLine: {
+                    lineStyle: {
+                        color: '#ffffff',
+//                            width:8,//这里是为了突出显示加上的，可以去掉
                     }
                 },
-                data: [18203, 23489, 29034, 104970, 131744]
+                //  改变x轴字体颜色和大小
+                axisLabel: {
+                    textStyle: {
+                        color: '#ffffff',
+                        fontSize: '16'
+                    },
+                },
+            },
+        ],
+        yAxis: [
+            {
+                type: 'value',
+                axisLine: {
+                    lineStyle: {
+                        color: '#ffffff',
+//                            width:8,//这里是为了突出显示加上的，可以去掉
+                    }
+                },
+                //  改变x轴字体颜色和大小
+                axisLabel: {
+                    textStyle: {
+                        color: '#ffffff',
+                        fontSize: '16'
+                    },
+                },
+                axisLabel: {
+                    formatter: '{value} w'
+                }
+            }
+        ],
+        series: [
+            {
+                name: '高价标签',
+                type: 'line',
+                stack: 'Total',
+                areaStyle: {
+                    color: '#ea0b0b',
+                    // opacity:0.25
+                },
+                emphasis: {
+                    focus: 'series'
+                },
+                data: [120, 132, 101, 134]
+            },
+            {
+                name: '中高价标签',
+                type: 'line',
+                stack: 'Total',
+                areaStyle: {
+                    color: '#ff9318',
+                    // opacity:0.25
+                },
+                emphasis: {
+                    focus: 'series'
+                },
+                data: [220, 182, 191, 234]
+            },
+            {
+                name: '中等价标签',
+                type: 'line',
+                stack: 'Total',
+                areaStyle: {
+                    color: '#fffb18',
+                    // opacity:0.25
+                },
+                emphasis: {
+                    focus: 'series'
+                },
+                data: [150, 232, 201, 154]
+            },
+            {
+                name: '中低价标签',
+                type: 'line',
+                stack: 'Total',
+                areaStyle: {
+                    color: '#51b7b3',
+                    // opacity:0.25
+                },
+                emphasis: {
+                    focus: 'series'
+                },
+                data: [320, 332, 301, 334]
+            },
+            {
+                name: '低价标签',
+                type: 'line',
+                stack: 'Total',
+                label: {
+                    show: true,
+                    position: 'top'
+                },
+                areaStyle: {
+                    color: '#4dd707',
+                    // opacity:0.25
+                },
+                emphasis: {
+                    focus: 'series'
+                },
+                data: [820, 932, 901, 1320]
             }
         ]
     };
