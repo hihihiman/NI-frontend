@@ -12,11 +12,11 @@
 <!--js-->
 <script src="js/echarts.min.js" charset="utf-8"></script>
 
+<script src="js/jquery.min.js"></script>
 <!--设置是否为缩放模式 -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- 新 Bootstrap 核心 CSS 文件 -->
 <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
-<script src="js/jquery.min.js"></script>
 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 <script src="js/bootstrap.min.js"></script>
 <script src="js/chartMap.js"></script>
@@ -811,27 +811,44 @@
     var myChart8 = echarts.init(document.getElementById('main8'));
 
     function randomData() {
-        return Math.round(Math.random()*500);
+        return Math.round(Math.random() * 500);
     }
 
     var mydata = [
-        {name: '北京',value: randomData(),a:'111' },{name: '天津',value: randomData() },
-        {name: '上海',value: randomData() },{name: '重庆',value: randomData() },
-        {name: '河北',value: randomData() },{name: '河南',value: randomData() },
-        {name: '云南',value: randomData() },{name: '辽宁',value: randomData() },
-        {name: '黑龙江',value: randomData() },{name: '湖南',value: randomData() },
-        {name: '安徽',value: randomData() },{name: '山东',value: randomData() },
-        {name: '新疆',value: randomData() },{name: '江苏',value: randomData() },
-        {name: '浙江',value: randomData() },{name: '江西',value: randomData() },
-        {name: '湖北',value: randomData() },{name: '广西',value: randomData() },
-        {name: '甘肃',value: randomData() },{name: '山西',value: randomData() },
-        {name: '内蒙古',value1:randomData(),value2:123  },{name: '陕西',value: randomData() },
-        {name: '吉林',value: randomData() },{name: '福建',value: randomData() },
-        {name: '贵州',value: randomData() },{name: '广东',value: randomData() },
-        {name: '青海',value: randomData() },{name: '西藏',value: randomData() },
-        {name: '四川',value: randomData() },{name: '宁夏',value: randomData() },
-        {name: '海南',value: randomData() },{name: '台湾',value: randomData() },
-        {name: '香港',value: randomData() },{name: '澳门',value: randomData() }
+        {name: '北京', COMPANY_PROVINCE: 4270,SHOP_PROVINCE:25331 , SHOP_DELIVERY_PROVINCE: 28687},
+        {name: '天津', COMPANY_PROVINCE:1162 ,SHOP_PROVINCE:2534 , SHOP_DELIVERY_PROVINCE: 4459},
+        {name: '上海', COMPANY_PROVINCE:8924 ,SHOP_PROVINCE: 28919, SHOP_DELIVERY_PROVINCE: 49599},
+        {name: '重庆', COMPANY_PROVINCE:1329 ,SHOP_PROVINCE: 1771, SHOP_DELIVERY_PROVINCE: 3662},
+        {name: '河北', COMPANY_PROVINCE:8450 ,SHOP_PROVINCE:8010 , SHOP_DELIVERY_PROVINCE: 27418},
+        {name: '河南', COMPANY_PROVINCE:9581 ,SHOP_PROVINCE: 6376, SHOP_DELIVERY_PROVINCE: 17791},
+        {name: '云南', COMPANY_PROVINCE: 1824,SHOP_PROVINCE:1874 , SHOP_DELIVERY_PROVINCE: 4124},
+        {name: '辽宁', COMPANY_PROVINCE:2592 ,SHOP_PROVINCE:3797 , SHOP_DELIVERY_PROVINCE: 7414},
+        {name: '黑龙江', COMPANY_PROVINCE:1263 ,SHOP_PROVINCE:1201 , SHOP_DELIVERY_PROVINCE: 2208},
+        {name: '湖南', COMPANY_PROVINCE: 4058,SHOP_PROVINCE: 3621, SHOP_DELIVERY_PROVINCE: 8626},
+        {name: '安徽', COMPANY_PROVINCE: 5115,SHOP_PROVINCE:3885 , SHOP_DELIVERY_PROVINCE: 9511},
+        {name: '山东', COMPANY_PROVINCE: 15394,SHOP_PROVINCE:13581 , SHOP_DELIVERY_PROVINCE: 33660},
+        {name: '新疆', COMPANY_PROVINCE: 563,SHOP_PROVINCE: 526, SHOP_DELIVERY_PROVINCE: 1162},
+        {name: '江苏', COMPANY_PROVINCE: 17418,SHOP_PROVINCE:24848 , SHOP_DELIVERY_PROVINCE: 57187},
+        {name: '浙江', COMPANY_PROVINCE:26830 ,SHOP_PROVINCE: 39417, SHOP_DELIVERY_PROVINCE: 102480},
+        {name: '江西', COMPANY_PROVINCE:4375 ,SHOP_PROVINCE: 3048, SHOP_DELIVERY_PROVINCE: 6948},
+        {name: '湖北', COMPANY_PROVINCE:4670 ,SHOP_PROVINCE: 4599, SHOP_DELIVERY_PROVINCE: 9232},
+        {name: '广西', COMPANY_PROVINCE: 1778,SHOP_PROVINCE: 2083, SHOP_DELIVERY_PROVINCE: 4174},
+        {name: '甘肃', COMPANY_PROVINCE:384 ,SHOP_PROVINCE: 231, SHOP_DELIVERY_PROVINCE: 587},
+        {name: '山西', COMPANY_PROVINCE:1346 ,SHOP_PROVINCE:1075 , SHOP_DELIVERY_PROVINCE: 2034},
+        {name: '内蒙古',COMPANY_PROVINCE:630 ,SHOP_PROVINCE: 617, SHOP_DELIVERY_PROVINCE: 1037},
+        {name: '陕西', COMPANY_PROVINCE: 4531,SHOP_PROVINCE: 1689, SHOP_DELIVERY_PROVINCE: 3677},
+        {name: '吉林', COMPANY_PROVINCE:1305 ,SHOP_PROVINCE: 1057, SHOP_DELIVERY_PROVINCE: 1906},
+        {name: '福建', COMPANY_PROVINCE: 18753,SHOP_PROVINCE:10126 , SHOP_DELIVERY_PROVINCE: 29136},
+        {name: '贵州', COMPANY_PROVINCE:787 ,SHOP_PROVINCE:434 , SHOP_DELIVERY_PROVINCE: 1372},
+        {name: '广东', COMPANY_PROVINCE: 40364,SHOP_PROVINCE:63121, SHOP_DELIVERY_PROVINCE: 181135},
+        {name: '青海', COMPANY_PROVINCE:84 ,SHOP_PROVINCE: 0, SHOP_DELIVERY_PROVINCE: 158},
+        {name: '西藏', COMPANY_PROVINCE: 64,SHOP_PROVINCE: 0, SHOP_DELIVERY_PROVINCE: 177},
+        {name: '四川', COMPANY_PROVINCE: 5819,SHOP_PROVINCE: 5506, SHOP_DELIVERY_PROVINCE: 11144},
+        {name: '宁夏', COMPANY_PROVINCE: 166,SHOP_PROVINCE: 0, SHOP_DELIVERY_PROVINCE: 195},
+        {name: '海南', COMPANY_PROVINCE:321 ,SHOP_PROVINCE: 284, SHOP_DELIVERY_PROVINCE: 609},
+        {name: '台湾', COMPANY_PROVINCE: 0,SHOP_PROVINCE: 303, SHOP_DELIVERY_PROVINCE: 236},
+        {name: '香港', COMPANY_PROVINCE: 0,SHOP_PROVINCE:715 , SHOP_DELIVERY_PROVINCE: 1226},
+        {name: '澳门', COMPANY_PROVINCE:0 ,SHOP_PROVINCE: 0, SHOP_DELIVERY_PROVINCE: 67}
     ];
     let option = {
         tooltip: {
@@ -839,8 +856,9 @@
             formatter: function (params) {
                 return [
                     params.data.name,
-                    '注册店铺数:' + params.data.value1,
-                    '发货店铺数:' + params.data.value2,
+                    '店铺公司数:' + params.data.COMPANY_PROVINCE,
+                    '存在店铺数:' + params.data.SHOP_PROVINCE,
+                    '发货店铺数:' + params.data.SHOP_DELIVERY_PROVINCE
                 ].join('<br>');
             }
         },
@@ -870,15 +888,15 @@
             }
         },
         visualMap: {
-            show : false,
+            show: false,
             x: 'left',
             y: 'bottom',
             splitList: [
-                {start: 500, end:600},{start: 400, end: 500},
-                {start: 300, end: 400},{start: 200, end: 300},
-                {start: 100, end: 200},{start: 0, end: 100},
+                {start: 500, end: 600}, {start: 400, end: 500},
+                {start: 300, end: 400}, {start: 200, end: 300},
+                {start: 100, end: 200}, {start: 0, end: 100},
             ],
-            color: ['#66CC33', '#00FF00', '#66FF33','#339900', '#33CC00', '#00CC00']
+            color: ['#66CC33', '#00FF00', '#66FF33', '#339900', '#33CC00', '#00CC00']
         },
         series: [
             {
@@ -904,7 +922,7 @@
                 },
                 itemStyle: {
                     normal: {
-                        areaColor:'rgba(127,199,221,0.05)',
+                        areaColor: 'rgba(127,199,221,0.05)',
                         borderColor: "#389dff",
                         borderWidth: 0.5
                     },
@@ -917,7 +935,7 @@
                         shadowColor: "rgba(0, 0, 0, 0.5)"
                     }
                 },
-                data:mydata
+                data: mydata
             }
         ]
     };
@@ -933,6 +951,7 @@
 
             });
     }
+
     var T = setInterval(TimeControl, 2300);    //开始定时
     $(".message_scroll_box").mouseenter(function () {
         clearInterval(T);    //停止定时

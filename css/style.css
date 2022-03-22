@@ -309,27 +309,27 @@ html, body {
 }
 
 .c1 {
-    background: #b19cbe
+    background: #FFCCCC
 }
 
 .c2 {
-    background: #ffff00
+    background: #FFFF66
 }
 
 .c3 {
-    background: #0078ff
+    background: #0099CC
 }
 
 .c4 {
-    background: #9cff00
+    background: #CCFF99
 }
 
 .c5 {
-    background: #ff6c00
+    background: #FF9900
 }
 
 .c6 {
-    background: #77b5fb
+    background: #CC99CC
 }
 
 .big0 {
@@ -353,22 +353,22 @@ html, body {
 }
 
 .big4 {
-    width: 50px;
-    height: 50px
+    width: 55px;
+    height: 55px
 }
 
 .big5 {
-    width: 60px;
-    height: 60px
+    width: 70px;
+    height: 70px
 }
 
 .big6 {
-    width: 70px;
-    height: 70px;
+    width: 85px;
+    height: 85px;
 }
 .big7 {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
 }
 
 .leftclass {
