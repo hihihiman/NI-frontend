@@ -92,7 +92,7 @@
                 <div class="message_scroll_box">
                     <div class="message_scroll">
                         <div class="scroll_top">
-                            <span class="scroll_title">缅甸优选1店</span>
+                            <span class="scroll_title">缅甸优选消毒液</span>
                             <span class="scroll_level scroll_level02">二级</span>
                             <a class="localize"></a>
                             <span class="scroll_timer">2021-09</span>
@@ -212,13 +212,13 @@
                     </div>
                     <div class="lefttoday_bar">
                         <ul>
-                            <li class="c1 big7" style="top: 10%;left: 16%;"><span>服装鞋包</span></li>
-                            <li class="c2 big6" style="top: 15%;left: 65%;"><span>百货食品</span></li>
-                            <li class="c3 big5" style="top: 25%;left: 35%;"><span>家居建材</span></li>
-                            <li class="c4 big5" style="top: 65%;left: 65%;"><span>美妆饰品</span></li>
-                            <li class="c5 big4" style="top: 65%;left: 25%;"><span>手机数码</span></li>
-                            <li class="c5 big7" style="top: 0%;left: 45%;"><span>母婴用品</span></li>
-                            <li class="c6 big4" style="top: 45%;left: 5%;"><span>文化玩乐</span></li>
+                            <li class="c1 big7" style="top: 10%;left: 16%;"><span class="circle-span3">服装鞋包</span></li>
+                            <li class="c2 big6" style="top: 15%;left: 65%;"><span class="circle-span">百货食品</span></li>
+                            <li class="c3 big5" style="top: 25%;left: 35%;"><span class="circle-span2">家居建材</span></li>
+                            <li class="c4 big5" style="top: 65%;left: 65%;"><span class="circle-span2">美妆饰品</span></li>
+                            <li class="c5 big4" style="top: 65%;left: 25%;"><span class="circle-span">手机数码</span></li>
+                            <li class="c5 big7" style="top: 0%;left: 45%;"><span class="circle-span3">母婴用品</span></li>
+                            <li class="c6 big4" style="top: 45%;left: 5%;"><span class="circle-span">文化玩乐</span></li>
                             <li class="c1 big3" style="top: 35%;left: 90%;"></li>
                             <li class="c2 big3" style="top: 85%;left: 55%;"></li>
                             <li class="c3 big2" style="top: 85%;left: 15%;"></li>
@@ -227,7 +227,7 @@
                 </div>
             </div>
             <!--  map end-->
-            <div class="pmrboxbottom" style="padding-top: 30px"><h2 class="tith2 pt1">离群点检测</h2>
+            <div class="pmrboxbottom" style="padding-top: 30px"><h2 class="tith2 pt1">销量异常离群点检测</h2>
                 <div id="chart_3d" class="pmrboxbottomcont"></div>
             </div>
         </div>
@@ -289,7 +289,8 @@
                 }
             },
             axisLabel: {
-                color: "rgba(255,255,255,0)"
+                color: "rgba(255,255,255,0)",
+                fontSize: '16'
             },
             boundaryGap: [0, 0.01]
         },
@@ -306,7 +307,8 @@
                 }
             },
             axisLabel: {
-                color: "rgba(255,255,255,.5)"
+                color: "rgb(255,255,255)",
+                fontSize: '16'
             },
             data: ['消毒液', '家居智能设备', '果蔬收纳袋', '卫衣', '摆件']
         },
@@ -323,7 +325,8 @@
                                 {offset: 0, color: 'rgba(139,203,232,0.89)'},
                                 {offset: 1, color: 'rgba(41,220,205,0)'}
                             ]
-                        )
+                        ),
+                        fontSize: '16'
                     }
                 },
                 data: [18203, 23489, 29034, 31242, 40000]
@@ -399,7 +402,8 @@
                 }
             },
             axisLabel: {
-                color: "rgba(255,255,255,0)"
+                color: "rgba(255,255,255,0)",
+                fontSize: '16'
             },
             boundaryGap: [0, 0.01]
         },
@@ -416,7 +420,8 @@
                 }
             },
             axisLabel: {
-                color: "rgba(255,255,255,.5)"
+                color: "rgb(255,255,255)",
+                fontSize: '16'
             },
             data: ['评论/收藏异常', '销量波动大', '销量较大且为整数', '销量超过可信商品', '价格超过可信商品']
         },
@@ -433,7 +438,8 @@
                                 {offset: 0, color: 'rgba(139,203,232,0.89)'},
                                 {offset: 1, color: 'rgba(41,220,205,0)'}
                             ]
-                        )
+                        ),
+                        fontSize: '16'
                     }
                 },
                 data: [1458, 2500, 2847, 4403, 5012,]
@@ -602,6 +608,7 @@
                 name: 'Access From',
                 type: 'pie',
                 radius: '50%',
+                startAngle:0,
                 data: [
                     // {value: 4358992, name: '正常'},
                     {value: 11216, name: '销量异常'},
@@ -615,7 +622,8 @@
                     }
                 },
                 label: {
-                    color: '#fff'
+                    color: '#fff',
+                    fontSize: '16'
                 }
             }
         ]
@@ -998,12 +1006,12 @@
                     }
                 },
                 //  改变x轴字体颜色和大小
-                axisLabel: {
-                    textStyle: {
-                        color: '#ffffff',
-                        fontSize: '16'
-                    },
-                },
+                // axisLabel: {
+                //     textStyle: {
+                //         color: '#ffffff',
+                //         fontSize: '16'
+                //     },
+                // },
                 axisLabel: {
                     formatter: '{value} '
                 }

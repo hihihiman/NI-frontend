@@ -38,11 +38,6 @@ var COLOR = {
 function renderLegend(){
 	drawLegend(COLOR.MACHINE.TYPE_A,25,'A机型');
 	drawLegend(COLOR.MACHINE.TYPE_B,50,'B机型');
-	drawLegend(COLOR.MACHINE.TYPE_C,75,'C机型');
-	drawLegend(COLOR.MACHINE.TYPE_D,100,'D机型');
-	drawLegend(COLOR.MACHINE.TYPE_E,125,'E机型');
-	drawLegend(COLOR.MACHINE.TYPE_F,150,'F机型');
-	drawLegend(COLOR.MACHINE.TYPE_G,175,'G机型');
 }
 
 function drawLegend(pointColor,pointY,text){
@@ -117,7 +112,7 @@ function renderChartBar01(){
 							show:false,
 							x : 'center',
 							y : 'bottom',
-							data:['A机型','B机型','C机型','D机型','E机型','F机型','G机型']
+							data:['A机型','B机型']
 						},
 						toolbox: {
 						},
@@ -137,13 +132,9 @@ function renderChartBar01(){
 								center : ['50%', '50%'],
 								//roseType : 'area',
 								data:[
-									{value:4600, name:'A机型'},
-									{value:4600, name:'B机型'},
-									{value:15600, name:'C机型'},
-									{value:6600, name:'D机型'},
-									{value:5700, name:'E机型'},
-									{value:7600, name:'F机型'},
-									{value:3500, name:'G机型'}
+									{value:1, name:'A机型'},
+									{value:7, name:'B机型'}
+									
 								]
 							}
 						]

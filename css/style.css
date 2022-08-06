@@ -113,6 +113,7 @@ html, body {
     float: left;
     height: 100%
 }
+
 .left3 {
     width: 18%;
     float: left;
@@ -123,6 +124,17 @@ html, body {
     justify-content: flex-start;
     align-items: stretch;
 }
+
+/*.left3 {*/
+/*    width: 18%;*/
+/*    float: left;*/
+/*    height: 100%;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    flex-wrap: nowrap;*/
+/*    align-items: baseline;*/
+/*    justify-content: center;*/
+/*}*/
 
 .mrbox {
     float: left;
@@ -304,32 +316,44 @@ html, body {
 }
 
 .lefttoday_bar li span {
-    padding-top: 30%;
+    padding-top: 40%;
     display: inline-block;
 }
 
+.circle-span{
+    font-size: 13px;
+}
+
+.circle-span2{
+    font-size: 16px;
+}
+.circle-span3{
+    font-size: 20px;
+}
+
 .c1 {
-    background: #FFCCCC
+    background: #FFCCCC;
 }
 
 .c2 {
-    background: #FFFF66
+    background: #FFFF66;
+
 }
 
 .c3 {
-    background: #0099CC
+    background: #0099CC;
 }
 
 .c4 {
-    background: #CCFF99
+    background: #CCFF99;
 }
 
 .c5 {
-    background: #FF9900
+    background: #FF9900;
 }
 
 .c6 {
-    background: #CC99CC
+    background: #CC99CC;
 }
 
 .big0 {
@@ -575,7 +599,7 @@ html, body {
 
 .topbnt_left li {
     background: url(../img/bnt.png) center;
-    font-size: 14px;
+    font-size: 17px;
     line-height: 33px;
     background-repeat: no-repeat;
     width: 18%;
@@ -1048,6 +1072,13 @@ i.redr {
     height: 79%;
 }
 
+.arightboxbottcont3 {
+    width: 91%;
+    margin-top: 1%;
+    margin-left: 5%;
+    height: 79%;
+}
+
 .arightboxbottcont2 {
     width: 90%;
     margin-top: 1.6%;
@@ -1145,7 +1176,7 @@ i.redr {
     background-repeat: no-repeat;
     background-position: top center;
     width: 97.8%;
-    margin-top: 5%;
+    margin-top: 10%;
     height: 34%;
 }
 
